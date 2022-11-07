@@ -10,11 +10,11 @@ function clickHandler (event) {
     let textOfBusiness = document.createElement('div')
     
     let elementAddString = document.getElementById('addInput').value; //присваиваю новой переменной значение, которое ввел в поле ввода
-    if (elementAddString.lenth<0) return; //Проверка на то, что поле ввода не пустое
-    console.log(elementAddString);
-    
-    textOfBusiness.appendChild(elementAddString); //добавляю значение из поля ввода в newElement, который создал ранее
-    textOfBusiness.appendChild(newElement);
+    if (elementAddString.length<1) return; //Проверка на то, что поле ввода не пустое
+        
+    textOfBusiness.append(elementAddString); //добавляю значение из поля ввода в newElement, который создал ранее
+    newElement.appendChild(textOfBusiness);
+    console.log(newElement);
     
     let trash = document.createElement('img')
     trash.src = './to-do-list/trash.png'
