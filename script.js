@@ -17,9 +17,17 @@ function clickHandler (event) {
     console.log(newElement);
     
     let trash = document.createElement('img')
-    trash.src = './to-do-list/trash.png'
+    trash.classList.add('trash');
+    trash.src = './trash.png'
     newElement.appendChild(trash);
     
     toDoList.appendChild(newElement); //Перемещаю div в список дел, который создал заранее в HTML и объявил его в начале JS
     
+    trash.addEventListener('click', deletText);
+    function deletText (event) {
+        newElement.remove();
+    }
+
 }
+
+
